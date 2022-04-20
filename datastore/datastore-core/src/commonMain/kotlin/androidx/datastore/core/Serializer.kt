@@ -16,8 +16,14 @@
 
 package androidx.datastore.core
 
-expect abstract class InputStream
-expect abstract class OutputStream
+expect abstract class InputStream {
+    @Throws(IOException::class)
+    abstract fun read(): Int
+}
+expect abstract class OutputStream {
+    @Throws(IOException::class)
+    abstract fun write(var1: Int)
+}
 
 expect open class IOException(message: String?, cause: Throwable?) : Exception
 /**

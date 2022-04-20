@@ -36,7 +36,7 @@ internal class TestingSerializer(
             throw IOException("I was asked to fail on reads")
         }
 
-        val read = input.readInt()
+        val read = input.read()
         if (read == -1) {
             return 0
         }
@@ -47,6 +47,6 @@ internal class TestingSerializer(
         if (failingWrite) {
             throw IOException("I was asked to fail on writes")
         }
-        output.writeInt(t.toInt())
+        output.write(t.toInt())
     }
 }

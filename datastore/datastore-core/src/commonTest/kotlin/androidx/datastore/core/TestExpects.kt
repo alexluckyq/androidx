@@ -16,8 +16,8 @@
 
 package androidx.datastore.core
 
-expect fun InputStream.readInt(): Int
-expect fun OutputStream.writeInt(value: Int)
+//expect fun InputStream.readInt(): Int
+//expect fun OutputStream.writeInt(value: Int)
 
 
 expect class TestIO (

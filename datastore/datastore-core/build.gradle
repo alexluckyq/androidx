@@ -27,7 +27,7 @@ kotlin {
     jvm {
         withJava()
     }
-    macosX64()
+    macosArm64()
     sourceSets {
         commonMain {
             dependencies {
@@ -43,7 +43,7 @@ kotlin {
             }
         }
 
-        macosX64Main { // TODO move this to nativeMain or nonJvmMain
+        macosArm64Main { // TODO move this to nativeMain or nonJvmMain
             dependencies {
                 api("com.squareup.okio:okio:3.0.0")
                 implementation("org.jetbrains.kotlinx:atomicfu:0.17.2")
